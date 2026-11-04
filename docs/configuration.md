@@ -1,3 +1,5 @@
+**English** · [Русский](configuration.ru.md)
+
 # Configuration
 
 The mod stores `config/elysium-halloween/config.json` and `statistics.json` inside the game instance.

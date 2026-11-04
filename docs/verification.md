@@ -1,3 +1,5 @@
+**English** · [Русский](verification.ru.md)
+
 # Initial public release verification
 
 Version: `1.1.4` · 2026-11-04.

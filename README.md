@@ -1,3 +1,5 @@
+**English** · [Русский](README.ru.md)
+
 ![Sol Sanctum · Halloween](docs/assets/cover.svg)
 
 # Sol Sanctum · Halloween
@@ -7,7 +9,7 @@ A local-first Fabric event counter and a self-hosted leaderboard for Minecraft H
 [![CI](https://github.com/ari3lYT/sol-sanctum-halloween/actions/workflows/ci.yml/badge.svg)](https://github.com/ari3lYT/sol-sanctum-halloween/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-87bfa3)](LICENSE)
 
-[Quick start](#quick-start) · [Architecture](docs/architecture.md) · [Development](docs/development.md) · [Русский](docs/README.ru.md)
+[Quick start](#quick-start) · [Architecture](docs/architecture.md) · [Development](docs/development.md)
 
 
 ## See it
