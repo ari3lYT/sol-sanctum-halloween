@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "ru.d2.elysium.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "StatsPacketMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

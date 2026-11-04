@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "elysium_halloween",
+  "version": "${version}",
+  "name": "Sol Sanctum | Makoto · Halloween",
+  "description": "Конфеты за убийства мобов в тыквах и рейтинг на d2omg.ru/halloween.",
+  "authors": [
+    "Sol Sanctum | Makoto"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.d2.elysium.ElysiumClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "elysium_halloween.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "${minecraft}",
+    "java": ">=${java}",
+    "fabric-api": ">=${api}"
+  }
+}

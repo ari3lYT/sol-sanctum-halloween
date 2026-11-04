@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id": "elysium_halloween_test",
+  "version": "1.0.0",
+  "name": "Elysium integration tests (development only)",
+  "environment": "client",
+  "entrypoints": { "fabric-client-gametest": ["ru.d2.elysium.EventGameTest"] }
+}

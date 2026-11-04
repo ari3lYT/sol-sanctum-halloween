@@ -1,0 +1,33 @@
+plugins { id 'net.fabricmc.fabric-loom-remap' version '1.18.4' }
+base { archivesName = 'sol-sanctum-halloween-1.21.11' }
+repositories { mavenCentral() }
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.11'
+    mappings loom.officialMojangMappings()
+    modImplementation 'net.fabricmc:fabric-loader:0.20.1'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+sourceSets {
+    main { java.srcDir rootProject.file('common/src/main/java'); resources.srcDir rootProject.file('common/src/main/resources') }
+    test { java.srcDir rootProject.file('common/src/test/java') }
+}
+java { sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21; withSourcesJar() }
+tasks.withType(JavaCompile).configureEach { options.release = 21; options.encoding = 'UTF-8' }
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand(version: project.version, minecraft: '1.21.11', java: '21', api: '0.141.6+1.21.11') }
+}
+test { useJUnitPlatform() }
+jar { from(rootProject.file('LICENSE')) }
+
+// Optional real-client integration tests. The test mod is never included in the release jar.
+if (providers.gradleProperty('gameTests').isPresent()) {
+    fabricApi.configureTests {
+        createSourceSet = true
+        modId = 'elysium_halloween_test'
+        enableGameTests = false
+        enableClientGameTests = true
+    }
+}
